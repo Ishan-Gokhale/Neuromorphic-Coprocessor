@@ -21,4 +21,4 @@ module macs#(parameter NUM_MACS = 8)
     endgenerate
 endmodule
 
-// The code isn't being implemented in Vivado owing to some I/O pins issue which will need to be cleared
+// The code isn't being implemented in Vivado owing to some I/O pins issue, needs to be tested for ZedBoard
