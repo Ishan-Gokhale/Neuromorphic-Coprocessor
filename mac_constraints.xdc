@@ -1,3 +1,3 @@
-create_clock -period 2.25 [get_ports clk]
+create_clock -period 1.6 [get_ports clk]
 
 #set_property IOSTANDARD LVCMOS33 [get_ports *]
