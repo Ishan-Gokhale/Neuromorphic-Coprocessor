@@ -2,13 +2,13 @@
 
 module macs#(parameter NUM_MACS = 8)
     (
-    input [63:0] datas,
-    input [63:0] weights,
-    input [7:0] valids,
+        input [8*NUM_MACS-1:0] datas,
+    input [8*NUM_MACS-1:0] weights,
+        input [NUM_MACS-1:0] valids,
     input reset,
     input clk,
-    output [127:0] outs,
-    output [7:0] outValids
+        output [16*NUM_MACS-1:0] outs,
+        output [NUM_MACS-1:0] outValids
     );
     
     genvar i;
