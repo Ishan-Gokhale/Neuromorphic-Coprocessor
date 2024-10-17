@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module mac_axi4s(
     input valid,
     input reset,
@@ -10,8 +12,11 @@ module mac_axi4s(
     input wire m_axis_tready,       // Master output ready
     output reg [15:0] m_axis_tdata  // Result from the MAC
 );
-    reg [7:0] data, weight;  // Unpacked data and weight
+    wire [7:0] data, weight;  // Unpacked data and weight
     reg [15:0] out1, w1;     // Intermediate results
+    
+    assign data = s_axis_tdata[7:0];
+    assign weight = s_axis_tdata[15:8];
 
     always @(posedge clk) begin
         if (reset) begin
@@ -20,19 +25,21 @@ module mac_axi4s(
             w1 <= 16'b0;
             s_axis_tready <= 1'b0;
             m_axis_tvalid <= 1'b0;
-        end else begin
-            if (s_axis_tvalid && s_axis_tready) begin
+        end 
+        
+        else begin
+            if (s_axis_tvalid && m_axis_tready && valid) begin
                 // Unpack data and weight from s_axis_tdata
-                data <= s_axis_tdata[7:0];      // Lower 8 bits for data
-                weight <= s_axis_tdata[15:8];   // Upper 8 bits for weight
+                //data <= s_axis_tdata[7:0];      // Lower 8 bits for data
+                //weight <= s_axis_tdata[15:8];   // Upper 8 bits for weight
 
                 // Perform MAC operation when valid
-                if (valid) begin
+                //if (valid) begin
                     out1 = data * weight;      // Multiply data and weight
                     m_axis_tdata = out1 + w1;  // Accumulate result
                     w1 <= m_axis_tdata;        // Store accumulated value
                     m_axis_tvalid <= 1'b1;     // Output valid
-                end
+                //end
             end
 
             // Handshaking with the master
