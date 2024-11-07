@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 19 2021
+03:16:22
+C:/Users/ajayv/neuromorphic_coprocessor/neuromorphic_coprocessor.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,,,,,,,
+C:/Users/ajayv/neuromorphic_coprocessor/neuromorphic_coprocessor.srcs/sim_1/new/macs_axi4s_tb.v,1729707399,verilog,,,,macs_axi4s_tb,,,,,,,,
+C:/Users/ajayv/neuromorphic_coprocessor/neuromorphic_coprocessor.srcs/sources_1/new/mac_axi4s.v,1729167730,verilog,,C:/Users/ajayv/neuromorphic_coprocessor/neuromorphic_coprocessor.srcs/sources_1/new/macs_axi4s.v,,mac_axi4s,,,,,,,,
+C:/Users/ajayv/neuromorphic_coprocessor/neuromorphic_coprocessor.srcs/sources_1/new/macs_axi4s.v,1729706784,verilog,,C:/Users/ajayv/neuromorphic_coprocessor/neuromorphic_coprocessor.srcs/sim_1/new/macs_axi4s_tb.v,,macs_axi4s,,,,,,,,
