@@ -1,7 +1,0 @@
-Running: xsim.dir/macs_axi4s_tb_behav/xsimk.exe -simmode gui -wdb macs_axi4s_tb_behav.wdb -simrunnum 0 -socket 56019
-Design successfully loaded
-Design Loading Memory Usage: 7988 KB (Peak: 7988 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 8584 KB (Peak: 8584 KB)
-Simulation CPU Usage: 0 ms
