@@ -1,0 +1,68 @@
+15:50:02 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\ajayv\neuromorphic_coprocessor\sw\temp_xsdb_launch_script.tcl
+15:50:02 INFO  : Registering command handlers for Vitis TCF services
+15:50:02 INFO  : Platform repository initialization has completed.
+15:50:04 INFO  : XSCT server has started successfully.
+15:50:04 INFO  : plnx-install-location is set to ''
+15:50:04 INFO  : Successfully done setting XSCT server connection channel  
+15:50:04 INFO  : Successfully done query RDI_DATADIR 
+15:50:05 INFO  : Successfully done setting workspace for the tool. 
+15:55:31 INFO  : Result from executing command 'getProjects': neuromorphic_coprocessor_wrapper
+15:55:31 INFO  : Result from executing command 'getPlatforms': 
+15:55:31 WARN  : An unexpected exception occurred in the module 'platform project logging'
+15:55:31 INFO  : Platform 'neuromorphic_coprocessor_wrapper' is added to custom repositories.
+15:55:51 INFO  : Platform 'neuromorphic_coprocessor_wrapper' is added to custom repositories.
+16:33:41 INFO  : Result from executing command 'getProjects': neuromorphic_coprocessor_wrapper
+16:33:42 INFO  : Result from executing command 'getPlatforms': neuromorphic_coprocessor_wrapper|C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_wrapper/export/neuromorphic_coprocessor_wrapper/neuromorphic_coprocessor_wrapper.xpfm
+16:33:42 INFO  : Checking for BSP changes to sync application flags for project 'neuromorphic_coprocessor_dma'...
+16:35:06 INFO  : Checking for BSP changes to sync application flags for project 'neuromorphic_coprocessor_dma'...
+16:35:45 INFO  : Checking for BSP changes to sync application flags for project 'neuromorphic_coprocessor_dma'...
+16:35:59 INFO  : Checking for BSP changes to sync application flags for project 'neuromorphic_coprocessor_dma'...
+16:36:06 INFO  : Checking for BSP changes to sync application flags for project 'neuromorphic_coprocessor_dma'...
+16:36:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA56C4" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA56C4-23727093-0"}' command is executed.
+16:36:43 INFO  : 'fpga -state' command is executed.
+16:36:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:36:44 INFO  : Jtag cable 'Digilent Zed 210248AA56C4' is selected.
+16:36:50 INFO  : 'jtag frequency' command is executed.
+16:36:50 INFO  : Context for 'APU' is selected.
+16:36:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_wrapper/export/neuromorphic_coprocessor_wrapper/hw/neuromorphic_coprocessor_wrapper.xsa'.
+16:37:03 INFO  : 'configparams force-mem-access 1' command is executed.
+16:37:03 INFO  : Context for 'APU' is selected.
+16:37:10 INFO  : 'stop' command is executed.
+16:37:10 INFO  : Sourcing of 'C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_dma/_ide/psinit/ps7_init.tcl' is done.
+16:38:17 ERROR : 'ps7_init' is cancelled.
+16:38:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_wrapper/export/neuromorphic_coprocessor_wrapper/hw/neuromorphic_coprocessor_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_dma/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+16:38:17 ERROR : 'ps7_init' is cancelled.
+16:40:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248AA56C4" && level==0 && jtag_device_ctx=="jsn-Zed-210248AA56C4-23727093-0"}' command is executed.
+16:40:35 INFO  : 'fpga -state' command is executed.
+16:40:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:40:35 INFO  : Jtag cable 'Digilent Zed 210248AA56C4' is selected.
+16:40:41 INFO  : 'jtag frequency' command is executed.
+16:40:41 INFO  : Context for 'APU' is selected.
+16:40:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_wrapper/export/neuromorphic_coprocessor_wrapper/hw/neuromorphic_coprocessor_wrapper.xsa'.
+16:40:41 INFO  : 'configparams force-mem-access 1' command is executed.
+16:40:41 INFO  : Context for 'APU' is selected.
+16:40:48 INFO  : 'stop' command is executed.
+16:40:48 INFO  : Sourcing of 'C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_dma/_ide/psinit/ps7_init.tcl' is done.
+16:42:19 ERROR : Invalid context
+16:42:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_wrapper/export/neuromorphic_coprocessor_wrapper/hw/neuromorphic_coprocessor_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/Users/ajayv/neuromorphic_coprocessor/sw/neuromorphic_coprocessor_dma/_ide/psinit/ps7_init.tcl
+ps7_init
+----------------End of Script----------------
+
+16:42:19 ERROR : Invalid context
